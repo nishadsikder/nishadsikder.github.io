@@ -1,0 +1,174 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Changa', sans-serif;
+  font-weight: 500; 
+}
+
+body{
+  margin: 0 auto;
+  padding: 0;
+  height: 100%;
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+/* =====================
+UNIVERSAL CSS
+=====================*/
+$gold: #ffb752;
+
+
+/*=====================
+COMMON CSS
+=====================*/
+.text-gold{
+  color: $gold;
+}
+.text-white{
+  color: #fff;
+}
+.bg-gold{
+  background-color: $gold;
+}
+h1{
+  font-size: 80px;
+}
+hr{
+    color: #fff;
+    border-color: #fff;
+    background-color: #fff;
+}
+
+
+
+
+
+/* =====================
+PAGE CSS
+=====================*/
+.wrapper{
+    background: url("images/pexels-kai-pilger-1341279.jpg");
+    height: 100%;
+    width: 100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+header{
+    height: 100vh;
+  .navbar{  
+      border-top: 4px solid $gold;
+      border-radius: 10px;
+      .nav-item {
+          margin-right: 5px;
+      }
+      .nav-link {
+          color: #fff !important;
+      }
+      .active, .nav-link{
+          transition: all 0.3s;
+      }
+      .active, .nav-link:hover{
+          color: $gold !important;
+          transform: scale(1.2);
+      }
+      .navbar-brand{
+          height: 50px;
+          width: 350px;
+          img{
+              height: 100%;
+          }
+      }
+      .search-box{
+          position: relative;
+          height: 40px;
+          width: 260px;
+          border-radius: 50%;
+          
+          input{
+              width: 100%;
+              height: 100%;
+              border: none;
+              border-radius: 50px;
+              background: #000;
+              border: 2px solid #fff;
+              padding: 0 20px 0 20px;
+              font-size: 15px;
+              font-weight: bold;
+              color: $gold;
+              transition: all 0.4s;
+          }
+          .search-box input::placeholder{
+              color: #fff;
+            }
+          .search-icon{
+              position: absolute;
+              right: 5px;
+              top: 50%;
+              transform: translateY(-50%);
+              font-size: 15px;
+              height: 30px;
+              width: 33px;
+              background: #fff;
+              border-radius: 50%;
+              text-align: center;
+              line-height: 32px;
+              color: $gold;
+              cursor: pointer;
+              transition: all 0.4s;
+          }
+      }
+      .search-box:hover .search-icon{
+          background: $gold;
+          color: #fff;
+      }
+      .search-box:hover input, .search-box input:focus {
+          border-color: $gold;
+      }
+  }
+  .main-body{
+      .moon{
+          img{
+            // margin-top: 150px;
+            // margin-left: 900px;
+            height: 150px;
+          }
+      }
+      .intro{
+        //   margin-left: 120px;
+          .icons{
+              display: inline-block;
+              margin-top: 13px;
+              cursor: pointer;
+              span{
+                  margin-right: 15px;
+                  font-size: 22px;
+                  line-height: 22px;
+                  a{
+                      text-decoration: none;
+                      color: #fff;
+                  }
+                  a:hover{
+                      color: $gold;
+                  }
+              }
+          }
+      }
+  }
+}
+}
+
+
+@supports (backdrop-filter: blur()){
+    nav {
+        backdrop-filter: blur(4px);
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+}
+@supports not (backdrop-filter: blur()) {
+    nav {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+}
